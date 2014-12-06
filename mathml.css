@@ -1,0 +1,92 @@
+
+.no-mathml .script+div, .mathml .script+div, .mathml .no-mathml-warning {
+      display: none;
+}
+.no-mathml .no-mathml-warning {
+      display: block;
+      color: red;
+      font-weight: bold;
+}
+
+       .no-mathml math {
+         word-spacing: -2pt;
+       }
+
+        .no-mathml math mi {
+            font-style: italic; 
+        }
+        .no-mathml math mi[mathvariant=normal] {
+            font-style: normal;
+            font-weight: normal;
+        }
+        .no-mathml math mi[mathvariant=bold] {
+            font-weight: bold;
+            font-style: normal; 
+        }
+        .no-mathml math mi[mathvariant=bold-italic] {
+            font-weight: bold;
+            font-style: italic; 
+        }
+        .no-mathml math mi[mathvariant=script] {
+            font-weight: normal;
+            font-style: normal;
+            font-family: script;
+        }
+
+	.no-mathml math munder > *:last-child, .no-mathml math munderover >
+		*:nth-child(2), .no-mathml math msubsup >
+		*:nth-child(2), .no-mathml math msub > *:last-child {
+		vertical-align: text-bottom;
+		font-size: 65%;
+	}
+
+	.no-mathml math mover > *:last-child, .no-mathml math munderover >
+		*:last-child, .no-mathml math msubsup >
+		*:last-child, .no-mathml math msup > *:last-child {
+		vertical-align: text-top;
+		font-size: 65%;
+	}
+
+
+        .no-mathml math mfrac, .no-mathml math mtable {
+                display: inline-table;
+		vertical-align: middle;
+        }
+
+        .no-mathml math mtable mtr {
+                display: table-row;
+        }
+
+        .no-mathml math mtable mtd {
+                display: table-cell;
+                padding: 2pt;
+                text-align: center;
+        }
+
+        .no-mathml math mfrac > :first-child {
+                display: table-cell;
+                text-align: center;
+		border-bottom: 2px solid black;
+         }
+	
+	 .no-mathml math mfrac > :last-child {
+                text-align: center;
+                display: table-row;
+	 }
+
+         .no-mathml math mfenced:before {
+                content: "(";
+	 }
+         .no-mathml math mfenced:after {
+                content: ")";
+	 }
+         .no-mathml math mfenced > *:first-child:before {
+                content: "";
+	 }
+         .no-mathml math mfenced > *:before {
+                content: ", ";
+	 }
+         .no-mathml math msqrt, .no-mathml math mroot  { 
+                 border-top: 1px solid black;
+                 border-left: 1px solid black;
+         }
